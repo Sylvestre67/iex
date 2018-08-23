@@ -14,6 +14,12 @@ export const darkTheme = createMuiTheme({
 export const lightTheme = createMuiTheme({
     palette: {
         type: 'light',
+        primary: {
+            main: '#0d9da8',
+        },
+        secondary: {
+            main: '#ffa200',
+        },
     },
     typography: {
         fontFamily: defaultFontFamily,
