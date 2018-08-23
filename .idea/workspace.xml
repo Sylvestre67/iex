@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18339ec7-8463-4a19-8e89-21b1aad4faea" name="Default" comment="" />
+    <list default="true" id="18339ec7-8463-4a19-8e89-21b1aad4faea" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/iex.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -58,11 +65,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -76,13 +93,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/App.test.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/registerServiceWorker.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -172,12 +189,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534989068689</updated>
-      <workItem from="1534989070909" duration="301000" />
+      <workItem from="1534989070909" duration="483000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="301000" />
+    <option name="totallyTimeSpent" value="483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1073" height="821" extended-state="0" />
@@ -213,14 +230,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -270,10 +279,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1534989218367" expanded="true" signature="13357:13385" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="14778:15054" ph="{&quot;version&quot;: &quot;0.2.0&quot;...}" />
+              <marker date="1534989218367" expanded="true" signature="14822:15052" ph="[...]" />
+              <marker date="1534989218367" expanded="true" signature="14823:15051" ph="{&quot;name&quot;: &quot;Chrome&quot;...}" />
+              <marker date="1534989218367" expanded="true" signature="14999:15047" ph="{&quot;webpack:///src/*&quot;: &quot;${webRoot}/*&quot;...}" />
+              <marker date="1534989218367" expanded="true" signature="20280:20311" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="20293:20309" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="20417:20482" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="20561:20616" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="20574:20614" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="22478:22775" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="22502:22652" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="22557:22589" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="22611:22646" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="22666:22773" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="22687:22762" ph="&lt;div/&gt;" />
+              <marker date="1534989218367" expanded="true" signature="23823:23843" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="23879:23936" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="24018:24123" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="24031:24121" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="25192:25258" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="25291:25578" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="31090:31140" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="31247:31334" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="31544:31584" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="34416:34681" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="34420:34614" ph="//..." />
+              <marker date="1534989218367" expanded="true" signature="37116:37200" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="37201:37305" ph="//..." />
+              <marker date="1534989218367" expanded="true" signature="43152:43299" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="43239:43292" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="43749:43775" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="55217:55330" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="55239:55319" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="55253:55315" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="55673:56273" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="55695:56262" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="55755:55819" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="55879:56005" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="55948:55986" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="56087:56134" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="56212:56258" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="57204:57616" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="57226:57605" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="57243:57601" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="57330:57565" ph="//..." />
+              <marker date="1534989218367" expanded="true" signature="58808:58937" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="58817:58937" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="60633:60729" ph="&lt;html/&gt;" />
+              <marker date="1534989218367" expanded="true" signature="60652:60729" ph="&lt;head/&gt;" />
+              <marker date="1534989218367" expanded="true" signature="60663:60729" ph="&lt;script/&gt;" />
+              <marker date="1534989218367" expanded="true" signature="64609:64676" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="65556:65634" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="65673:65754" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="67010:67085" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="67427:67505" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="67544:67567" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="68478:68556" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="68594:68784" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="70491:70610" ph="//..." />
+              <marker date="1534989218367" expanded="true" signature="70892:70984" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="71022:71122" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="72127:72177" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="72650:72716" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="73070:73153" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="74444:74861" ph="{&quot;name&quot;: &quot;your-package&quot;...}" />
+              <marker date="1534989218367" expanded="true" signature="74482:74859" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="74512:74612" ph="[...]" />
+              <marker date="1534989218367" expanded="true" signature="74639:74767" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="74657:74761" ph="{&quot;branches&quot;: 90...}" />
+              <marker date="1534989218367" expanded="true" signature="77206:77324" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="94283:94347" ph="{...}" />
+              <marker date="1534989218367" expanded="true" signature="118624:118672" ph="..." />
+              <marker date="1534989218367" expanded="true" signature="118814:118889" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding />
         </state>
       </provider>
