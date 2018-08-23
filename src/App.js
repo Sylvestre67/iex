@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 import {MuiThemeProvider, withStyles} from '@material-ui/core/styles';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 
 import grey from '@material-ui/core/colors/grey';
 
@@ -12,9 +15,7 @@ import {darkTheme, lightTheme} from "./theme/Theme";
 import withSocketManager from './components/withSocketManager';
 import NavBar from './components/NavBar';
 import Stock from './components/Stock';
-
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import ChartContainer from './components/ChartContainer';
 
 // const quote = {
 //     "symbol":"FB",
@@ -53,10 +54,10 @@ const styles = theme => ({
         flexDirection: 'column'
     },
     grow: {
+        position:'relative',
         flexGrow: 1,
         overflow: 'scroll'
     }
-
 });
 
 
@@ -64,12 +65,19 @@ class App extends Component {
 
     constructor(props) {
         super(props);
+
         this.toggleTheme = this.toggleTheme.bind(this);
+        this.updateActiveSymbol = this.updateActiveSymbol.bind(this);
 
         this.state = {
-            theme: lightTheme
+            theme: lightTheme,
+            activeSymbol: Object.keys(props.quotes)[0]
         };
     }
+
+    updateActiveSymbol(symbol){
+        this.setState({activeSymbol : symbol});
+    };
 
     toggleTheme(){
         const {theme} = this.state;
@@ -89,13 +97,15 @@ class App extends Component {
 
         return Object.keys(quotes).map(sym => {
             const quote = quotes[sym][quotes[sym].length - 1];
-            return <Stock key={sym} {...quote} />
+
+            return (quote) ? <Stock key={sym} {...quote} onClick={this.updateActiveSymbol}/> : null;
         });
     }
 
     render() {
         const {classes} = this.props;
-        const {theme} = this.state;
+        const {theme, activeSymbol} = this.state;
+
         return (
             <MuiThemeProvider theme={theme}>
                 <CssBaseline/>
@@ -111,7 +121,6 @@ class App extends Component {
                               className={classes.flex}
                               xs={3}>
                             <Paper square elevation={0} className={classes.grow}>
-
                                 <AppBar position="static"
                                         elevation={0}
                                         color='default'>
@@ -119,21 +128,25 @@ class App extends Component {
                                         <Typography variant='subheading'>Watch List</Typography>
                                     </Toolbar>
                                 </AppBar>
-
-                                {this.renderWatchList()}
-
+                               {this.renderWatchList()}
                             </Paper>
                         </Grid>
 
                         <Grid item xs={6} className={classes.flex}>
                             <Paper square elevation={0} className={classes.grow}>
-
+                                <ChartContainer symbol={activeSymbol} />
                             </Paper>
                         </Grid>
 
                         <Grid item xs={3} className={classes.flex}>
                             <Paper square elevation={0} className={classes.grow}>
-
+                                <AppBar position="static"
+                                        elevation={0}
+                                        color='default'>
+                                    <Toolbar>
+                                        <Typography variant='subheading'>News Feed</Typography>
+                                    </Toolbar>
+                                </AppBar>
                             </Paper>
                         </Grid>
                     </Grid>

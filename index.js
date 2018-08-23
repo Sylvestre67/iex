@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-
+var nasdaq = require('./data/nasdaq');
 var iexSocket;
 
 app.use(express.static('build'));
@@ -15,7 +15,7 @@ io.on('connection', function(socket){
     console.log('a user connected');
 
     // Connect to iexSocket
-    iexSocket = require('socket.io-client')('https://ws-api.iextrading.com/1.0/tops');
+    iexSocket = require('socket.io-client')('https://ws-api.iextrading.com/1.0/last');
 
     // Register events callback
     iexSocket.on('message', message => {
@@ -26,7 +26,8 @@ io.on('connection', function(socket){
     iexSocket.on('connect', () => {
         console.log('iex connected');
         // Subscribe
-        iexSocket.emit('subscribe', 'snap,fb,googl');
+        iexSocket.emit('subscribe', 'FB,AAPL,GOOGL,SNAP,ALTABA,MSFT');
+        //nasdaq.nasdaq.sort().slice(0,15).join(',')
     });
 
     socket.on('disconnect', function(){

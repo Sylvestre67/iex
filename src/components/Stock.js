@@ -24,6 +24,7 @@ const styles = theme => ({
     },
     lsp:{
         display:'flex',
+        flex:'0 0 25%',
         backgroundColor:grey[400],
         alignItems:'center',
         padding: `0 ${theme.spacing.unit}px`
@@ -31,9 +32,9 @@ const styles = theme => ({
 });
 
 function Stock(props) {
-    const {classes, symbol, lastSalePrice, seq} = props;
+    const {classes, symbol, price, seq, onClick} = props;
     return (
-        <div className={classes.root}>
+        <div className={classes.root} onClick={() => onClick(symbol)}>
             <div className={classes.symbol}>
                 <div>
                     <Typography>{symbol}</Typography>
@@ -41,7 +42,7 @@ function Stock(props) {
                 </div>
             </div>
             <div className={classes.lsp}>
-                <Typography>$ {numeral(lastSalePrice).format('0,0.00')}</Typography>
+                <Typography>$ {numeral(price).format('0,0.00')}</Typography>
             </div>
         </div>
     );
