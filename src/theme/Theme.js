@@ -20,6 +20,11 @@ export const lightTheme = createMuiTheme({
         secondary: {
             main: '#ffa200',
         },
+        error: {
+            light: '#ff8982',
+            main: '#ff5555',
+            dark: '#c5162c'
+        },
     },
     typography: {
         fontFamily: defaultFontFamily,

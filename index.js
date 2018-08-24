@@ -3,19 +3,35 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var nasdaq = require('./data/nasdaq');
+var fetch = require('node-fetch');
 var iexSocket;
 
 app.use(express.static('build'));
 
-app.get('/', function(req, res){
+app.get('/api/nasdaq', function (req, res) {
+
+    fetch(`https://api.iextrading.com/1.0/stock/market/batch?symbols=${nasdaq.nasdaq.slice(0, 10).join(',')}&types=quote,news,chart&range=1m&last=1`)
+        .then(function (response) {
+            return response.json();
+        })
+        .catch(function (err) {
+            console.log(err);
+        })
+        .then(function (json) {
+            res.json(json);
+        });
+});
+
+app.get('/', function (req, res) {
     res.sendFile(__dirname + '/build//index.html');
 });
 
-io.on('connection', function(socket){
+
+io.on('connection', function (socket) {
     console.log('a user connected');
 
     // Connect to iexSocket
-    iexSocket = require('socket.io-client')('https://ws-api.iextrading.com/1.0/last');
+    iexSocket = require('socket.io-client')('https://ws-api.iextrading.com/1.0/tops');
 
     // Register events callback
     iexSocket.on('message', message => {
@@ -26,17 +42,19 @@ io.on('connection', function(socket){
     iexSocket.on('connect', () => {
         console.log('iex connected');
         // Subscribe
-        iexSocket.emit('subscribe', 'FB,AAPL,GOOGL,SNAP,ALTABA,MSFT');
+        iexSocket.emit('subscribe', nasdaq.nasdaq.join(','));
+
+        // 'FB,AAPL,GOOGL,SNAP,ALTABA,MSFT');
         //nasdaq.nasdaq.sort().slice(0,15).join(',')
     });
 
-    socket.on('disconnect', function(){
+    socket.on('disconnect', function () {
         // Kill
         iexSocket.disconnect();
         console.log('user disconnected');
     });
 });
 
-http.listen(3030, function(){
+http.listen(3030, function () {
     console.log('listening on *:3030');
 });
