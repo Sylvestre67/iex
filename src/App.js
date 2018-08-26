@@ -90,7 +90,8 @@ class App extends Component {
         this.updateStock = this.updateStock.bind(this);
 
         this.state = {
-            theme: lightTheme
+            theme: lightTheme,
+            activeSymbol: stockList[0]
         };
     }
 
@@ -104,7 +105,6 @@ class App extends Component {
             })
             .then(stocks => {
                 this.setState({
-                    activeSymbol: Object.keys(stocks.data)[0],
                     stocks: stocks.data
                 });
 
@@ -151,6 +151,8 @@ class App extends Component {
                 <Divider/>
                 {Object.keys(stocks).map(sym => {
                     const quote = stocks[sym].quote;
+                    const percent = (quote.marketPercent) ? quote.marketPercent : quote.changePercent;
+
                     return <React.Fragment key={sym}>
                         <ListItem button onClick={() => this.updateActiveSymbol(sym)}>
                             <ListItemText
@@ -159,12 +161,12 @@ class App extends Component {
                             />
                             <ListItemText
                                 className={
-                                    (quote.changePercent < 0)
+                                    (percent < 0)
                                         ? classes.negative
                                         : classes.positive
                                 }
                                 style={{textAlign: 'right'}}
-                                primary={numeral(quote.changePercent).format('0.00%')}
+                                primary={numeral(percent).format('0.00%')}
                                 secondary={quote.calculationPrice}
                             />
                         </ListItem>
@@ -179,7 +181,7 @@ class App extends Component {
 
     render() {
         const {classes} = this.props;
-        const {theme, activeSymbol} = this.state;
+        const {theme, activeSymbol, stocks} = this.state;
 
         return (
             <MuiThemeProvider theme={theme}>

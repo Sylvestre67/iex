@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14e98560-1231-4340-a072-ec82c272f560" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
       <change beforePath="$PROJECT_DIR$/src/charts/charts.js" afterPath="$PROJECT_DIR$/src/charts/charts.js" />
       <change beforePath="$PROJECT_DIR$/src/components/ChartContainer.js" afterPath="$PROJECT_DIR$/src/components/ChartContainer.js" />
     </list>
@@ -18,24 +18,46 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="49" />
+            <state relative-caret-position="963">
+              <caret line="223" column="45" lean-forward="true" selection-start-line="223" selection-start-column="45" selection-end-line="223" selection-end-column="45" />
               <folding>
-                <element signature="e#2876#2925#0" expanded="false" />
-                <element signature="e#2955#3258#0" expanded="false" />
-                <element signature="n#!!block;n#updateStock#0;n#App#0" expanded="false" />
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#2916#2965#0" expanded="false" />
                 <element signature="n#!!block;n#toggleTheme#0;n#App#0" expanded="false" />
-                <element signature="n#!!block;n#renderWatchList#0;n#App#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChartContainer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChartContainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ChartContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="50" column="21" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+            <state relative-caret-position="618">
+              <caret line="70" column="36" lean-forward="true" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LineChart.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/LineChart.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DynamicLineChart.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/DynamicLineChart.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -56,10 +78,14 @@
       <file leaf-file-name="charts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/charts/charts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="85">
+              <caret line="107" column="32" lean-forward="false" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="32" />
               <folding>
+                <element signature="n#!!block;n#lineChart#0" expanded="false" />
                 <element signature="e#1423#1465#0" expanded="false" />
+                <element signature="e#4414#4456#0" expanded="false" />
+                <element signature="e#5222#5243#0" expanded="false" />
+                <element signature="e#5500#5524#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -89,6 +115,21 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lineChart</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>dynamicLineChart</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -98,9 +139,11 @@
         <option value="$PROJECT_DIR$/src/theme/Theme.js" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/src/components/withSocketManager.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/charts/charts.js" />
         <option value="$PROJECT_DIR$/src/components/ChartContainer.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/DynamicLineChart.js" />
+        <option value="$PROJECT_DIR$/src/components/LineChart.js" />
       </list>
     </option>
   </component>
@@ -225,12 +268,12 @@
       <workItem from="1535070080942" duration="8000" />
       <workItem from="1535070091750" duration="10204000" />
       <workItem from="1535240320262" duration="147000" />
-      <workItem from="1535294702788" duration="5430000" />
+      <workItem from="1535294702788" duration="9650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15789000" />
+    <option name="totallyTimeSpent" value="20009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="904" y="23" width="1257" height="1361" extended-state="0" />
@@ -271,11 +314,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2876#2925#0" expanded="false" />
-            <element signature="e#2955#3258#0" expanded="false" />
-            <element signature="n#!!block;n#updateStock#0;n#App#0" expanded="false" />
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#2916#2965#0" expanded="false" />
             <element signature="n#!!block;n#toggleTheme#0;n#App#0" expanded="false" />
-            <element signature="n#!!block;n#renderWatchList#0;n#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -295,7 +336,11 @@
         <state relative-caret-position="544">
           <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
           <folding>
+            <element signature="n#!!block;n#lineChart#0" expanded="false" />
             <element signature="e#1423#1465#0" expanded="false" />
+            <element signature="e#4414#4456#0" expanded="false" />
+            <element signature="e#5222#5243#0" expanded="false" />
+            <element signature="e#5500#5524#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -323,11 +368,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2876#2925#0" expanded="false" />
-            <element signature="e#2955#3258#0" expanded="false" />
-            <element signature="n#!!block;n#updateStock#0;n#App#0" expanded="false" />
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#2916#2965#0" expanded="false" />
             <element signature="n#!!block;n#toggleTheme#0;n#App#0" expanded="false" />
-            <element signature="n#!!block;n#renderWatchList#0;n#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -347,7 +390,11 @@
         <state relative-caret-position="544">
           <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
           <folding>
+            <element signature="n#!!block;n#lineChart#0" expanded="false" />
             <element signature="e#1423#1465#0" expanded="false" />
+            <element signature="e#4414#4456#0" expanded="false" />
+            <element signature="e#5222#5243#0" expanded="false" />
+            <element signature="e#5500#5524#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -402,20 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="49" />
-          <folding>
-            <element signature="e#2876#2925#0" expanded="false" />
-            <element signature="e#2955#3258#0" expanded="false" />
-            <element signature="n#!!block;n#updateStock#0;n#App#0" expanded="false" />
-            <element signature="n#!!block;n#toggleTheme#0;n#App#0" expanded="false" />
-            <element signature="n#!!block;n#renderWatchList#0;n#App#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -426,18 +459,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/charts/charts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        <state relative-caret-position="85">
+          <caret line="107" column="32" lean-forward="false" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="32" />
           <folding>
+            <element signature="n#!!block;n#lineChart#0" expanded="false" />
             <element signature="e#1423#1465#0" expanded="false" />
+            <element signature="e#4414#4456#0" expanded="false" />
+            <element signature="e#5222#5243#0" expanded="false" />
+            <element signature="e#5500#5524#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ChartContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="50" column="21" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+        <state relative-caret-position="618">
+          <caret line="70" column="36" lean-forward="true" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="963">
+          <caret line="223" column="45" lean-forward="true" selection-start-line="223" selection-start-column="45" selection-end-line="223" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#2916#2965#0" expanded="false" />
+            <element signature="n#!!block;n#toggleTheme#0;n#App#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DynamicLineChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/LineChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
