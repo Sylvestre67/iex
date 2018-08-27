@@ -5,7 +5,7 @@ function withSocketManager(WrappedComponent) {
     return class extends React.Component {
 
         connectToSocket() {
-            return io('http://localhost:3030/');
+            return io('/');
         }
 
         subscribeToNewQuote(socket, callback) {

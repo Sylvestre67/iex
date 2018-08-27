@@ -104,7 +104,6 @@ export function lineChart(element, data) {
         });
 }
 
-
 export function dynamicLineChart(element, data) {
 
     const days = (data.range) ? data.data : data;
