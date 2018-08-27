@@ -6,6 +6,10 @@ var nasdaq = require('./data/nasdaq');
 var fetch = require('node-fetch');
 var iexSocket;
 
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 3030;
+
 app.use(express.static('build'));
 
 app.get('/api/nasdaq', function (req, res) {
@@ -55,6 +59,6 @@ io.on('connection', function (socket) {
     });
 });
 
-http.listen(3030, function () {
+http.listen(port, function () {
     console.log('listening on *:3030');
 });
