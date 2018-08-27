@@ -89,14 +89,15 @@ class DynamicLineChart extends Component {
             .then((stocks) => {
 
                 // If market is closed switched to the last day chart.
-                if (stocks.data.range) {
+                if (stocks.data.range !== 'today') {
                     this.setState({range: '1d'});
                 } else {
-                    dynamicLineChart(element, stocks.data);
+                    const dataset = (stocks.data.range) ? stocks.data.data : stocks.data;
+                    dynamicLineChart(element, dataset);
 
                     window.addEventListener('resize', () => {
                         element.innerHTML = '';
-                        dynamicLineChart(element, stocks.data);
+                        dynamicLineChart(element, dataset);
                     }, false);
                 }
             })
@@ -107,10 +108,11 @@ class DynamicLineChart extends Component {
         const polling = window.setInterval(() => {
             axios.get(`https://api.iextrading.com/1.0/stock/${symbol}/chart/${range}`)
                 .then(function (stocks) {
-                    dynamicLineChart(element, stocks.data);
+                    const dataset = (stocks.data.range) ? stocks.data.data : stocks.data;
+                    dynamicLineChart(element, dataset);
 
                     // Checking if the dataset is complete.
-                    if (stocks.data.length > 389) {
+                    if (dataset > 389) {
                         console.log('clearing');
                         clearInterval(polling);
                     }

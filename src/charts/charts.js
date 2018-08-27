@@ -115,10 +115,10 @@ export function dynamicLineChart(element, data) {
     const svgWidth = width - margin.left - margin.right;
     const svgHeight = height - margin.top - margin.bottom;
 
-    const [minClose, maxClose] = d3.extent(days, (d) => d.marketAverage);
+    const [minClose, maxClose] = d3.extent(days, (d) => d.average);
     const closeDelta = (maxClose - minClose);
 
-    const [minVolume, maxVolume] = d3.extent(days, (d) => d.marketVolume);
+    const [minVolume, maxVolume] = d3.extent(days, (d) => d.volume);
 
     const timeParse = d3.timeParse("%H:%M");
     const formatTime = d3.timeFormat("%H:%M");
@@ -150,7 +150,7 @@ export function dynamicLineChart(element, data) {
             return x(date);
         })
         .y((d) => {
-            return y(d.marketAverage);
+            return y(d.average);
         });
 
     const xAxis = d3.axisBottom(x)
@@ -212,13 +212,13 @@ export function dynamicLineChart(element, data) {
                 return x(date);
             })
             .attr("y", function (d) {
-                return yVolumeScale(d.marketVolume);
+                return yVolumeScale(d.volume);
             })
             .attr("width", xVolumeScale.bandwidth())
             .attr("height", 0)
             .transition().duration(1000)
             .attr("height", function (d) {
-                return svgHeight - yVolumeScale(d.marketVolume);
+                return svgHeight - yVolumeScale(d.volume);
             });
     }
 
@@ -237,13 +237,13 @@ export function dynamicLineChart(element, data) {
                 return x(date);
             })
             .attr("y", function (d) {
-                return yVolumeScale(d.marketVolume);
+                return yVolumeScale(d.volume);
             })
             .attr("width", xVolumeScale.bandwidth())
             .attr("height", 0)
             .transition().duration(1000)
             .attr("height", function (d) {
-                return svgHeight - yVolumeScale(d.marketVolume);
+                return svgHeight - yVolumeScale(d.volume);
             });
     }
 
