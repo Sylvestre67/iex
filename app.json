@@ -1,0 +1,12 @@
+{
+  "name": "IEX",
+  "description": "A test on IEX api",
+  "repository": "https://github.com/Sylvestre67/iex",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": [
+    "iex",
+    "express",
+    "heroku"
+  ],
+  "image": "heroku/nodejs"
+}
