@@ -43,7 +43,7 @@ class DynamicLineChart extends Component {
         super(props);
 
         this.state = {
-            range: '1d'
+            range: 'dynamic'
         }
     }
 
@@ -54,22 +54,76 @@ class DynamicLineChart extends Component {
         }
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        const {symbol} = this.props;
+        const {range, polling} = this.state;
+        const {element} = this;
+
+        if (symbol !== prevProps.symbol || range !== prevState.range) {
+            element.innerHTML = '';
+            clearInterval(polling);
+            this.fetchData();
+        }
+    }
+
+    componentWillUnmount() {
+        const {stocks, polling} = this.state;
+        const {element} = this;
+
+        clearInterval(polling);
+
+        window.removeEventListener('resize', () => {
+            element.innerHTML = '';
+            dynamicLineChart(element, stocks.data);
+        }, false);
+    }
+
+
     fetchData() {
         const {symbol} = this.props;
         const {range} = this.state;
 
         const {element} = this;
 
-        return axios.get(`https://api.iextrading.com/1.0/stock/${symbol}/chart/${range}`)
-            .then(function (stocks) {
+        axios.get(`https://api.iextrading.com/1.0/stock/${symbol}/chart/${range}`)
+            .then((stocks) => {
 
-                window.addEventListener('resize', () => {
+                // If market is closed switched to the last day chart.
+                if (stocks.data.range) {
+                    this.setState({range: '1d'});
+                } else {
                     dynamicLineChart(element, stocks.data);
-                }, false);
 
-                dynamicLineChart(element, stocks.data);
+                    window.addEventListener('resize', () => {
+                        element.innerHTML = '';
+                        dynamicLineChart(element, stocks.data);
+                    }, false);
+                }
+            })
+            .catch((err) => {
+                console.log(err)
             });
+
+        const polling = window.setInterval(() => {
+            axios.get(`https://api.iextrading.com/1.0/stock/${symbol}/chart/${range}`)
+                .then(function (stocks) {
+                    dynamicLineChart(element, stocks.data);
+
+                    // Checking if the dataset is complete.
+                    if (stocks.data.length > 389) {
+                        console.log('clearing');
+                        clearInterval(polling);
+                    }
+                })
+                .catch((err) => {
+                    console.log(err)
+                });
+        }, 60 * 1000);
+
+        // Adding the polling to the state, to enable clearInterval on CDU lifecycle if condition met.
+        this.setState({polling})
     }
+
 
     render() {
 
@@ -84,7 +138,8 @@ class DynamicLineChart extends Component {
                 <div className={[classes.grow, classes.lineChart].join(' ')}
                      ref={element => this.element = element}/>
 
-                <div className={classes.legendLabel} style={{textAlign: 'right', marginTop: '-16px'}}>
+                <div className={classes.legendLabel}
+                     style={{textAlign: 'right', marginTop: '-16px', overflow: 'hidden'}}>
                     <Typography variant='caption'>Time</Typography>
                 </div>
             </React.Fragment>

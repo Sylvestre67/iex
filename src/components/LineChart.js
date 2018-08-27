@@ -62,6 +62,17 @@ class LineChart extends Component {
         }
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        const {symbol} = this.props;
+        const {element} = this;
+
+        if (symbol !== prevProps.symbol) {
+            element.innerHTML = '';
+
+            this.fetchData();
+        }
+    }
+
     componentWillUnmount() {
         const {stocks} = this.state;
         const {element} = this;

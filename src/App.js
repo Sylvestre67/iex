@@ -21,26 +21,7 @@ import {darkTheme, lightTheme} from "./theme/Theme";
 
 import withSocketManager from './components/withSocketManager';
 import NavBar from './components/NavBar';
-// import Stock from './components/Stock';
 import ChartContainer from './components/ChartContainer';
-// import {lineChart} from "./charts/charts";
-
-// const quote = {
-//     "symbol":"FB",
-//     "sector":"softwareservices",
-//     "securityType":"commonstock",
-//     "bidPrice":174.4100,
-//     "bidSize":200,
-//     "askPrice":175.5000,
-//     "askSize":100,
-//     "lastUpdated":1535040093785,
-//     "lastSalePrice":174.3800,
-//     "lastSaleSize":100,
-//     "lastSaleTime":1535040071437,
-//     "volume":371342,
-//     "marketPercent":0.03796,
-//     "seq":81004
-// };
 
 const styles = theme => ({
     root: {
@@ -75,6 +56,9 @@ const styles = theme => ({
         '& span': {
             color: '#00a478'
         }
+    },
+    active: {
+        borderLeft: '5px solid #0d9da8'
     }
 });
 
@@ -144,7 +128,7 @@ class App extends Component {
 
     renderWatchList() {
         const {classes} = this.props;
-        const {stocks} = this.state;
+        const {stocks, activeSymbol} = this.state;
 
         if (stocks) {
             return <List dense>
@@ -154,7 +138,8 @@ class App extends Component {
                     const percent = (quote.marketPercent) ? quote.marketPercent : quote.changePercent;
 
                     return <React.Fragment key={sym}>
-                        <ListItem button onClick={() => this.updateActiveSymbol(sym)}>
+                        <ListItem className={(sym === activeSymbol) ? classes.active : ''} button
+                                  onClick={() => this.updateActiveSymbol(sym)}>
                             <ListItemText
                                 primary={sym}
                                 secondary={`$ ${numeral(quote.latestPrice).format('0,000.00')}`}
@@ -209,24 +194,13 @@ class App extends Component {
                             </Paper>
                         </Grid>
 
-                        <Grid item xs={6} className={classes.flex}>
+                        <Grid item xs={9} className={classes.flex}>
                             <Paper square elevation={0}
                                    className={[classes.grow, classes.flex].join(' ')}>
                                 <ChartContainer symbol={activeSymbol}/>
                             </Paper>
                         </Grid>
 
-                        <Grid item xs={3} className={classes.flex}>
-                            <Paper square elevation={0} className={classes.grow}>
-                                <AppBar position="static"
-                                        elevation={0}
-                                        color='default'>
-                                    <Toolbar>
-                                        <Typography variant='subheading'>News Feed</Typography>
-                                    </Toolbar>
-                                </AppBar>
-                            </Paper>
-                        </Grid>
                     </Grid>
                 </div>
             </MuiThemeProvider>
