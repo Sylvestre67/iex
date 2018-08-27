@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14e98560-1231-4340-a072-ec82c272f560" name="Default" comment="" />
+    <list default="true" id="14e98560-1231-4340-a072-ec82c272f560" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +27,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Theme.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Theme.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/theme/Theme.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+            <state relative-caret-position="850">
+              <caret line="50" column="3" lean-forward="true" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -151,6 +163,7 @@
         <option value="$PROJECT_DIR$/src/theme/Theme.js" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/app.json" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -252,12 +265,12 @@
       <workItem from="1535070080942" duration="8000" />
       <workItem from="1535070091750" duration="10204000" />
       <workItem from="1535240320262" duration="147000" />
-      <workItem from="1535294702788" duration="18305000" />
+      <workItem from="1535294702788" duration="18557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28664000" />
+    <option name="totallyTimeSpent" value="28916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="904" y="23" width="1257" height="1361" extended-state="0" />
@@ -507,8 +520,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/theme/Theme.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+        <state relative-caret-position="850">
+          <caret line="50" column="3" lean-forward="true" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding />
         </state>
       </provider>
