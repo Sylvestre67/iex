@@ -87,9 +87,8 @@ class DynamicLineChart extends Component {
 
         axios.get(`https://api.iextrading.com/1.0/stock/${symbol}/chart/${range}`)
             .then((stocks) => {
-
-                // If market is closed switched to the last day chart.
-                if (stocks.data.range !== 'today') {
+                // If market is closed render the last day chart.
+                if (stocks.data.range && stocks.data.range !== 'today') {
                     this.setState({range: '1d'});
                 } else {
                     const dataset = (stocks.data.range) ? stocks.data.data : stocks.data;
